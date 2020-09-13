@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    
+    <h3>A webpage containing two input fields and a button.</h3>
+    <div class="inputField"><input type="text" id="input1" placeholder="Type something"/></div>
+    <div class="inputField"><input type="text" id="input2" placeholder="Show on click"/></div>
+    <button onclick="copyIntoSecondInput()">Click</button>
+
+    <style>
+        input{
+            width:300px;
+        }
+        .inputField{
+            display: block;
+            padding:10px;
+        }
+        button{
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        function copyIntoSecondInput(){
+            const textValue = document.getElementById("input1");
+            // console.log(textValue.value);
+            document.getElementById("input2").value=textValue.value;
+        }
+    </script>
+</body>
+</html>

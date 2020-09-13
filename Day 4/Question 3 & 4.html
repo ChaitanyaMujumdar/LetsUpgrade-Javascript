@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 & 4</title>
+</head>
+<body>
+    <h3>Create an array of objects with objects having some properties</h3>
+    <p>Open Console</p>
+
+    <script>
+        let persons = [
+            {
+                name : "Alfred",
+                age : 52,
+                country : "India",
+                hobbies : ["driving", "coding", "watching movies"]
+            },
+            {
+                name : "Bruce",
+                age : 22,
+                country : "USA",
+                hobbies : ["games", "partying", "running"]
+            },
+            {
+                name : "Clark",
+                age : 28,
+                Country : "Krypton",
+                hobbies : ["playing", "music", "reading books"]
+            }
+        ]
+
+
+        function displayAllObjects(){
+            console.log("Displaing all objects");
+            for (let i=0;i<persons.length;i++){
+                console.log(persons[i]);
+            }
+        }
+
+        function displayYoungPersons(){
+            console.log("Displaying person with age less than 30");
+            for (let i=0;i<persons.length;i++){
+                if (persons[i].age < 30){
+                    console.log(persons[i]);
+                }
+            }
+        }
+
+        function displayIndians(){
+            console.log("Displaying persons from India")
+            for (let i=0;i<persons.length;i++){
+                if (persons[i].country == "India"){
+                    console.log(persons[i]);
+                }
+            }
+        }
+
+        displayAllObjects();
+        displayYoungPersons();
+        displayIndians();
+    </script>
+</body>
+</html>
